@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 540px;
+    width: 860px;
+    box-shadow: 0 0 1rem 0 silver;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+.wrapper-form {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: all 0.6s ease;
+}
+
+.login-form,
+.signup-form {
+    padding: 3rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.01s ease 0.18s;
+}
+
+h1 {
+    margin-bottom: 1.6rem;
+    color: #2e2e3f;
+    text-align: center;
+}
+
+input {
+    margin-top: 1.4rem;
+    padding: 0 1rem;
+    color: #2e2e3f;
+    font-size: 1rem;
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    background: #ddd;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: #555;
+    font-size: 1rem;
+}
+
+.forgot-pass {
+    margin-top: 0.4rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.forgot-pass a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: gray;
+    text-decoration: none;
+}
+
+.form-btn {
+    margin-top: 2rem;
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+.btn {
+    padding: 0.8rem 3rem;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, #0088ff, #00ff77);
+    transition: all 0.3s ease;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.wrapper-overlay {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: all 0.6s ease;
+}
+
+.login-overlay,
+.signup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: linear-gradient(45deg, #0088ff, #00ff77);
+    transition: all 0.4s ease;
+}
+
+.login-overlay-text,
+.signup-overlay-text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s ease;
+}
+
+.login-overlay-text h1,
+.signup-overlay-text h1 {
+    color: #fff;
+}
+
+p {
+    padding: 0 2rem;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.login-btn,
+.signup-btn {
+    margin-top: 2rem;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+@media screen and (max-width: 880px) {
+    .wrapper {
+        height: 100%;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .login-form,
+    .signup-form {
+        padding: 3rem 1rem;
+        top: 10%;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .wrapper {
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .wrapper-form {
+        width: 100%;
+        height: 70%;
+    }
+
+    .wrapper-overlay {
+        width: 100%;
+        height: 30%;
+    }
+
+    .login-form,
+    .signup-form {
+        padding: 1rem;
+        width: 390px;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.01s ease 0.12s;
+    }
+
+    .login-overlay-text h1,
+    .signup-overlay-text h1 {
+        font-size: 1.6rem;
+        margin: 0.6rem;
+    }
+
+    .login-overlay-text p,
+    .signup-overlay-text p {
+        font-size: 1rem;
+    }
+
+    .login-overlay-text button,
+    .signup-overlay-text button {
+        font-size: 1rem;
+        margin: 1rem;
+        padding: 0.6rem 2.6rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+
+    .login-form,
+    .signup-form {
+        width: 100%;
+    }
+}
